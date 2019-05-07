@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SWU 导航</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="西大网址大全">
+        <meta name="keywords" content="SWU,西大,网址,首页">
+        <meta name="author" content="hypercube">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <link rel="icon" href="favicon.ico">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/vue.min.js"></script>
+    </head>
+    <body>
+        <div class="u_nav-wrapper">
+            <div class="u_nav">
+                <div class="u_nav-left">
+                    <a class="u_nav-link" href=".">SWU 导航</a>
+                </div>
+                <!-- PC 端搜索框组 -->
+                <div class="u_nav-input-group">
+                    <form id="search-form-pc">
+                        <input class="u_nav-input" id="search-pc">
+                        <input type="submit" hidden>
+                    </form>
+                    <ul>
+                        <li class="u_nav-btn">
+                            <span onclick="search('google', 'pc')">Google</span>
+                            <ul class="u_nav-ul">
+                                <li><span class="u_nav-li" onclick="search('bing', 'pc')">Bing</span></li>
+                                <li><span class="u_nav-li" onclick="search('baidu', 'pc')">百度</span></li>
+                                <li><span class="u_nav-li" onclick="search('wolframalpha', 'pc')">wolfram</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 移动端搜索框组 -->
+                <div class="um_nav-input-group">
+                    <div class="clear"></div>
+                    <form id="search-form-mobile">
+                        <input class="um_nav-input" id="search-mobile">
+                        <input type="submit" hidden>
+                    </form>
+                    <div class="um_nav-btn" onclick="search('bing', 'mobile')">Bing</div>
+                    <div class="um_nav-btn" onclick="search('google', 'mobile')">Google</div>
+                    <div class="um_nav-btn" onclick="search('baidu', 'mobile')">百度</div>
+                    <div class="um_nav-btn" onclick="search('wolframalpha_mob', 'mobile')">wolfram</div>
+                </div>
+                <div class="u_nav-right">
+                    <a class="u_nav-link" href="https://swu.life/">本站网址: <b>swu.life</b></a>
+                    <a href="#" class="u_nav-link" onclick="setHome(this, window.location)">设为首页</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="u_main-wrapper">
+            <div class="main">
+                <div class="main-col">
+                    <!-- 常用网址 -->
+                    <div class="main-block">
+                        <span class="block-title">常用网址</span>
+                        <div class="block-grid-wrapper">
+                            <div class="block-grid">
+                                <a href="https://www.swu.edu.cn/" target="_blank">
+                                    西大官网
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-telegram"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="https://email.swu.edu.cn/" target="_blank">
+                                    学生/校友邮箱
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-envelop"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://login.swu.edu.cn/" target="_blank">
+                                    网络登录
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-sphere"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://service2.swu.edu.cn/selfservice/" target="_blank">
+                                    校园网自助服务
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-bug"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://bbs.swu.edu.cn/" target="_blank">
+                                    樟树林论坛
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-bubbles4"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://i.swu.edu.cn/" target="_blank">
+                                    校园信息门户
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-newspaper"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://www.lib.swu.edu.cn/" target="_blank">
+                                    图书馆
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-books"></use></svg>
+                                </a>
+                            </div>
+                                <a href="http://222.198.126.215:8080/" target="_blank">
+                            <div class="block-grid">
+                                    成绩单验证
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-printer"></use></svg>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- 学在科大 -->
+                    <div class="main-block">
+                        <span class="block-title">学在西大</span>
+                        <div class="block-grid-wrapper">
+                            <div class="block-grid">
+                                <a href="http://www.lib.swu.edu.cn/" target="_blank">
+                                    图书馆
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-books"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://202.202.96.87:8081/" target="_blank">
+                                    研修间预约
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-address-book"></use></svg>
+                                </a>
+                            </div>
+
+                            <div class="block-grid">
+                                <a href="http://zxzx.swu.edu.cn/" target="_blank">
+                                    学生资助管理中心
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-office"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://jwc.swu.edu.cn/" target="_blank">
+                                    教务处
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-briefcase"></use></svg>
+                                </a>
+                            </div>
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-col">
+                    <!-- 乐在科大 -->
+                    <div class="main-block">
+                        <span class="block-title">乐在科大</span>
+                        <div class="block-grid-wrapper">
+                            <div class="block-grid">
+                                <a href="http://http://www.swu.edu.cn/xywh_xswh_xshm.html" target="_blank">
+                                    西大文化
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-library"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://bbs.swu.edu.cn/" target="_blank">
+                                    樟树林论坛
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-bubbles4"></use></svg>
+                                </a>
+                            </div>
+                            
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- 技术乐园 -->
+                    <div class="main-block">
+                        <span class="block-title">技术乐园</span>
+                        <div class="block-grid-wrapper">
+                            <div class="block-grid">
+                                <a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank">
+                                    开源软件镜像-清华
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-tux"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="https://mirrors.ustc.edu.cn/" target="_blank">
+                                    开源软件镜像-科大
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-tux"></use></svg>
+                                </a>
+                            </div>
+                            <!-- <div class="block-grid"> -->
+                                <!-- <a href="https://git.lug.ustc.edu.cn/" target="_blank"> -->
+                                    <!-- Gitlab -->
+                                    <!-- <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-git"></use></svg> -->
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <!-- <div class="block-grid"> -->
+                                <!-- <a href="http://pxe.ustc.edu.cn/" target="_blank"> -->
+                                    <!-- PXE 启动服务 -->
+                                    <!-- <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-drive"></use></svg> -->
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <!-- <div class="block-grid"> -->
+                                <!-- <a href="https://oj.ustc.edu.cn/" target="_blank"> -->
+                                    <!-- Online Judge -->
+                                    <!-- <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-terminal"></use></svg> -->
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <!-- <div class="block-grid"> -->
+                                <!-- <a href="https://scc.ustc.edu.cn/" target="_blank"> -->
+                                    <!-- 超算中心 -->
+                                    <!-- <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-database"></use></svg> -->
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    
+                <div class="main-col">
+                    <!-- 外部网站 -->
+                    <div class="main-block" id="app-test">
+                        <span class="block-title">外部网站</span>
+                        <span v-if="false">我们正在测试新技术并收集反馈，如果您能看到这段话，或者“外部网站”这个区域显示效果有任何问题，请将情况描述、截图、使用的浏览器版本、上网方式等信息发给 <a href="mail:nakamura.desutini@gmail.com">nakamura.desutini@gmail.com</a>，谢谢！</span>
+                        <div class="block-grid-wrapper">
+                            <div class="block-grid" v-for="link in links">
+                                <a :href="link.url" target="_blank">
+                                    {{ link.title }}
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-link"></use></svg>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- 其他 -->
+                    <div class="main-block">
+                        <span class="block-title">其他</span>
+                        <div class="block-grid-wrapper">
+                            <!-- <div class="block-grid"> -->
+                                <!-- <a href="http://202.141.162.24:7480/" target="_blank"> -->
+                                    <!-- 自助打印复印 -->
+                                    <!-- <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-printer"></use></svg> -->
+                                <!-- </a> -->
+                            <!-- </div> -->
+                            <div class="block-grid">
+                                <a href="http://ms.swu.edu.cn/" target="_blank">
+                                    正版软件
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-floppy-disk"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="https://fix.ustc.edu.cn/" target="_blank">
+                                    教学设备报修
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-wrench"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://xyy.swu.edu.cn/" target="_blank">
+                                    校医院
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-hospital-o"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://ecard.swu.edu.cn/" target="_blank">
+                                    一卡通管理
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-credit-card"></use></svg>
+                                </a>
+                            </div>
+                            <div class="block-grid">
+                                <a href="http://upay.swu.edu.cn/" target="_blank">
+                                    网上缴费系统
+                                    <br><svg class="icon"><use xlink:href="image/symbol-defs.svg#icon-coin-yen"></use></svg>
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="footer">
+                <!-- refactored by ewind -->
+                <a href="#">SWU 导航</a>是 xxfwin 受到 <a href="https://ustc.life/">USTC 导航</a> 的启发后，为西大人量身打造的浏览器首页。
+                特别感谢 <a href="https://github.com/Smart-Hypercube/ustclife">Hypercube</a> 公开的源代码，使得SWU 导航快速上线成为可能。
+                <br><br>
+                项目源码：<a href="">https://github.com/swuos/swulife</a>，报错或申请收录请<a href="https://github.com/swuos/swulife/issues">创建 issue</a>。
+                <br><br>
+                Copyright © SWU导航 2019 - 2019
+            </div>
+        </div>
+    </body>
+    <script>
+        var setHome = function(obj, url) {
+            try {
+                obj.style.behavior = 'url(#default#homepage)';
+                obj.setHomePage(url);
+            } catch(e) {
+                if(window.netscape) {
+                    try {
+                        netscape.security.PrivilegeManager.enablePrivilege('UniversalXPConnect');
+                    } catch(e) {
+                        alert('抱歉，此操作被浏览器拒绝！\n\n解决方法1：\n请在浏览器地址栏输入“about:config”并回车\n然后将[signed.applets.codebase_principal_support]的值设置为true。\n\n解决方法2：\n手动将'+url+'设为首页。');
+                    }
+                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+                    prefs.setCharPref('browser.startup.homepage',url);
+                } else {
+                    alert('抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将' + url + '设置为首页。');
+                }
+            }
+        };
+        var search = function(site, env) {
+            var searchId = env === 'pc' ? 'search-pc' : 'search-mobile';
+            var baseURL = {
+                google: 'https://www.google.com/#q=',
+                baidu: 'https://www.baidu.com/s?wd=',
+                bing: 'https://www.bing.com/search?q=',
+                wolframalpha: 'https://www.wolframalpha.com/input/?i=',
+                wolframalpha_mob: 'https://m.wolframalpha.com/input/?i='
+            };
+            window.open(baseURL[site] + encodeURIComponent(document.getElementById(searchId).value));
+        };
+        document.getElementById("search-form-pc").onsubmit = function(e) {
+            e.preventDefault();
+            search('google', 'pc');
+        };
+        document.getElementById("search-form-mobile").onsubmit = function(e) {
+            e.preventDefault();
+            search('bing', 'mobile');
+        };
+        app = new Vue({
+            el: '#app-test',
+            data: {
+                links: [
+                    {title: '知乎', url: 'https://www.zhihu.com/'},
+                    {title: 'TED', url: 'https://www.ted.com/'},
+                    {title: '微博', url: 'https://www.weibo.com/'},
+                    {title: '淘宝', url: 'https://www.taobao.com/'},
+                    {title: '京东', url: 'https://www.jd.com/'},
+                    {title: '亚马逊', url: 'https://www.amazon.cn/'},
+                ],
+            },
+        });
+    </script>
+</html>
